@@ -1,86 +1,84 @@
 Archive member included to satisfy reference by file (symbol)
 
-d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                              D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o (exit)
-d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                              D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o (exit)
+d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               main.o (__do_copy_data)
-d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               main.o (__do_clear_bss)
 
 Discarded input sections
 
- .data          0x00000000        0x0 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .bss           0x00000000        0x0 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .data          0x00000000        0x0 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .bss           0x00000000        0x0 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .bss.numOfDataReceived_USB
-                0x00000000        0x1 main.o
- .bss.receivedDataPtr_USB
-                0x00000000        0x2 main.o
- .bss.numOfDataToReceive_USB
-                0x00000000        0x1 main.o
- .bss.idx       0x00000000        0x1 main.o
- .bss.incomingByte
-                0x00000000        0x1 main.o
- .bss.i         0x00000000        0x1 main.o
+ .data.Lazer_mm
+                0x00000000        0x8 main.o
  .data.testBuffer
                 0x00000000        0x6 main.o
- .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
- .data          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
- .bss           0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .bss.i         0x00000000        0x1 main.o
+ .bss.incomingByte
+                0x00000000        0x1 main.o
+ .bss.idx       0x00000000        0x1 main.o
+ .bss.receivedDataPtrUSB
+                0x00000000        0x2 main.o
+ .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
- .text.libgcc   0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
- .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
- .data          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
- .bss           0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
- .text.libgcc   0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
- .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
- .data          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
- .bss           0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.mul
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
-text             0x00000000         0x00040000         xr
-data             0x00800200         0x00002000         rw !x
-eeprom           0x00810000         0x00001000         rw !x
+text             0x00000000         0x00008000         xr
+data             0x00800100         0x00000800         rw !x
+eeprom           0x00810000         0x00000400         rw !x
 fuse             0x00820000         0x00000003         rw !x
 lock             0x00830000         0x00000400         rw !x
 signature        0x00840000         0x00000400         rw !x
@@ -89,25 +87,25 @@ user_signatures  0x00850000         0x00000400         rw !x
 
 Linker script and memory map
 
-Address of section .data set to 0x800200
-LOAD D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+Address of section .data set to 0x800100
+LOAD D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
 LOAD main.o
 START GROUP
-LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a
+LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
-LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a
-LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a
+LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 START GROUP
-LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a
-LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a
-LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a
-LOAD D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6\libatmega2560.a
+LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+LOAD d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a
+LOAD D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5\libatmega328pb.a
 END GROUP
-                0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
-                [0x00800200]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800200
-                [0x00040000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
-                [0x00002000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xfe00
-                [0x00001000]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000000]                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x00008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x00000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x00000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
                 [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
                 0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
                 0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
@@ -203,51 +201,51 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x3d8
+.text           0x00000000      0x578
  *(.vectors)
- .vectors       0x00000000       0xe4 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .vectors       0x00000000       0xb4 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
-                0x000000e4                . = ALIGN (0x2)
-                0x000000e4                __trampolines_start = .
+                0x000000b4                . = ALIGN (0x2)
+                0x000000b4                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x000000e4        0x0 linker stubs
+ .trampolines   0x000000b4        0x0 linker stubs
  *(.trampolines*)
-                0x000000e4                __trampolines_end = .
+                0x000000b4                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
-                0x000000e4                . = ALIGN (0x2)
+                0x000000b4                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x000000e4                __ctors_start = .
+                0x000000b4                __ctors_start = .
  *(.ctors)
-                0x000000e4                __ctors_end = .
-                0x000000e4                __dtors_start = .
+                0x000000b4                __ctors_end = .
+                0x000000b4                __dtors_start = .
  *(.dtors)
-                0x000000e4                __dtors_end = .
+                0x000000b4                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000e4        0x0 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x000000e4                __init
+ .init0         0x000000b4        0x0 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+                0x000000b4                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000e4       0x10 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init2         0x000000b4        0xc D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000f4       0x1a d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
-                0x000000f4                __do_copy_data
- .init4         0x0000010e       0x10 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
-                0x0000010e                __do_clear_bss
+ .init4         0x000000c0       0x16 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x000000c0                __do_copy_data
+ .init4         0x000000d6       0x10 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x000000d6                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -258,89 +256,79 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000011e        0x4 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init9         0x000000e6        0x4 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  *(.init9)
  *(.text)
- .text          0x00000122        0x2 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x00000122                __vector_38
-                0x00000122                __vector_22
-                0x00000122                __vector_28
-                0x00000122                __vector_1
-                0x00000122                __vector_32
-                0x00000122                __vector_34
-                0x00000122                __vector_24
-                0x00000122                __vector_12
-                0x00000122                __vector_55
-                0x00000122                __vector_46
-                0x00000122                __bad_interrupt
-                0x00000122                __vector_6
-                0x00000122                __vector_31
-                0x00000122                __vector_35
-                0x00000122                __vector_39
-                0x00000122                __vector_3
-                0x00000122                __vector_23
-                0x00000122                __vector_30
-                0x00000122                __vector_45
-                0x00000122                __vector_25
-                0x00000122                __vector_11
-                0x00000122                __vector_54
-                0x00000122                __vector_13
-                0x00000122                __vector_17
-                0x00000122                __vector_19
-                0x00000122                __vector_56
-                0x00000122                __vector_7
-                0x00000122                __vector_49
-                0x00000122                __vector_41
-                0x00000122                __vector_43
-                0x00000122                __vector_27
-                0x00000122                __vector_5
-                0x00000122                __vector_33
-                0x00000122                __vector_47
-                0x00000122                __vector_52
-                0x00000122                __vector_37
-                0x00000122                __vector_4
-                0x00000122                __vector_44
-                0x00000122                __vector_51
-                0x00000122                __vector_9
-                0x00000122                __vector_2
-                0x00000122                __vector_21
-                0x00000122                __vector_15
-                0x00000122                __vector_29
-                0x00000122                __vector_40
-                0x00000122                __vector_8
-                0x00000122                __vector_48
-                0x00000122                __vector_14
-                0x00000122                __vector_53
-                0x00000122                __vector_10
-                0x00000122                __vector_50
-                0x00000122                __vector_16
-                0x00000122                __vector_18
-                0x00000122                __vector_20
-                0x00000122                __vector_42
-                0x00000124                . = ALIGN (0x2)
+ .text          0x000000ea        0x2 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+                0x000000ea                __vector_38
+                0x000000ea                __vector_22
+                0x000000ea                __vector_1
+                0x000000ea                __vector_32
+                0x000000ea                __vector_34
+                0x000000ea                __vector_24
+                0x000000ea                __vector_12
+                0x000000ea                __bad_interrupt
+                0x000000ea                __vector_6
+                0x000000ea                __vector_31
+                0x000000ea                __vector_35
+                0x000000ea                __vector_39
+                0x000000ea                __vector_3
+                0x000000ea                __vector_23
+                0x000000ea                __vector_30
+                0x000000ea                __vector_25
+                0x000000ea                __vector_11
+                0x000000ea                __vector_13
+                0x000000ea                __vector_17
+                0x000000ea                __vector_7
+                0x000000ea                __vector_41
+                0x000000ea                __vector_43
+                0x000000ea                __vector_27
+                0x000000ea                __vector_5
+                0x000000ea                __vector_33
+                0x000000ea                __vector_37
+                0x000000ea                __vector_4
+                0x000000ea                __vector_44
+                0x000000ea                __vector_9
+                0x000000ea                __vector_2
+                0x000000ea                __vector_21
+                0x000000ea                __vector_15
+                0x000000ea                __vector_36
+                0x000000ea                __vector_40
+                0x000000ea                __vector_8
+                0x000000ea                __vector_26
+                0x000000ea                __vector_14
+                0x000000ea                __vector_10
+                0x000000ea                __vector_16
+                0x000000ea                __vector_18
+                0x000000ea                __vector_20
+                0x000000ea                __vector_42
+                0x000000ec                . = ALIGN (0x2)
  *(.text.*)
- .text._Z16UART_SendDataUSBPhh
-                0x00000124       0x20 main.o
-                0x00000124                _Z16UART_SendDataUSBPhh
  .text._Z13UART_SendDataPhh
-                0x00000144       0x20 main.o
-                0x00000144                _Z13UART_SendDataPhh
+                0x000000ec       0x4c main.o
+                0x000000ec                _Z13UART_SendDataPhh
+ .text._Z16UART_SendDataUSBPhh
+                0x00000138       0x4c main.o
+                0x00000138                _Z16UART_SendDataUSBPhh
  .text._Z16UART_ReceiveDataPhh
-                0x00000164       0x20 main.o
-                0x00000164                _Z16UART_ReceiveDataPhh
- .text.main     0x00000184       0xac main.o
-                0x00000184                main
- .text.__vector_26
-                0x00000230       0x6e main.o
-                0x00000230                __vector_26
- .text.__vector_36
-                0x0000029e      0x136 main.o
-                0x0000029e                __vector_36
-                0x000003d4                . = ALIGN (0x2)
+                0x00000184       0x4c main.o
+                0x00000184                _Z16UART_ReceiveDataPhh
+ .text.main     0x000001d0       0xb0 main.o
+                0x000001d0                main
+ .text.__vector_29
+                0x00000280       0x92 main.o
+                0x00000280                __vector_29
+ .text.__vector_19
+                0x00000312       0x92 main.o
+                0x00000312                __vector_19
+ .text.__vector_28
+                0x000003a4      0x1d0 main.o
+                0x000003a4                __vector_28
+                0x00000574                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000003d4        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x000003d4                _exit
-                0x000003d4                exit
+ .fini9         0x00000574        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000574                _exit
+                0x00000574                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -359,95 +347,92 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000003d4        0x4 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x00000574        0x4 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000003d8                _etext = .
+                0x00000578                _etext = .
 
-.data           0x00800200       0x20 load address 0x000003d8
-                0x00800200                PROVIDE (__data_start, .)
+.data           0x00800100       0x18 load address 0x00000578
+                0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.Lazer_start
-                0x00800200        0x7 main.o
-                0x00800200                Lazer_start
- .data.Lazer_1g
-                0x00800207        0x8 main.o
-                0x00800207                Lazer_1g
  .data.Lazer_0c
-                0x0080020f        0x8 main.o
-                0x0080020f                Lazer_0c
- .data.Lazer_mm
-                0x00800217        0x8 main.o
-                0x00800217                Lazer_mm
+                0x00800100        0x8 main.o
+                0x00800100                Lazer_0c
+ .data.Lazer_1g
+                0x00800108        0x8 main.o
+                0x00800108                Lazer_1g
+ .data.Lazer_start
+                0x00800110        0x7 main.o
+                0x00800110                Lazer_start
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800220                . = ALIGN (0x2)
- *fill*         0x0080021f        0x1 
-                0x00800220                _edata = .
-                0x00800220                PROVIDE (__data_end, .)
+                0x00800118                . = ALIGN (0x2)
+ *fill*         0x00800117        0x1 
+                0x00800118                _edata = .
+                0x00800118                PROVIDE (__data_end, .)
 
-.bss            0x00800220       0x26
-                0x00800220                PROVIDE (__bss_start, .)
+.bss            0x00800118       0x26
+                0x00800118                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.numOfDataReceived_Dal
-                0x00800220        0x1 main.o
-                0x00800220                numOfDataReceived_Dal
- .bss.numOfDataSended_Dal
-                0x00800221        0x1 main.o
-                0x00800221                numOfDataSended_Dal
- .bss.receivedDataPtr_Dal
-                0x00800222        0x2 main.o
-                0x00800222                receivedDataPtr_Dal
- .bss.sendDataPtr_Dal
-                0x00800224        0x2 main.o
-                0x00800224                sendDataPtr_Dal
- .bss.numOfDataToReceive_Dal
-                0x00800226        0x1 main.o
-                0x00800226                numOfDataToReceive_Dal
- .bss.numOfDataToSend_Dal
-                0x00800227        0x1 main.o
-                0x00800227                numOfDataToSend_Dal
- .bss.numOfDataSended_USB
-                0x00800228        0x1 main.o
-                0x00800228                numOfDataSended_USB
- .bss.sendDataPtr_USB
-                0x00800229        0x2 main.o
-                0x00800229                sendDataPtr_USB
- .bss.numOfDataToSend_USB
-                0x0080022b        0x1 main.o
-                0x0080022b                numOfDataToSend_USB
- .bss.readyToExchangeRec
-                0x0080022c        0x1 main.o
-                0x0080022c                readyToExchangeRec
- .bss.readyToExchangeUSB
-                0x0080022d        0x1 main.o
-                0x0080022d                readyToExchangeUSB
- .bss.readyToExchange
-                0x0080022e        0x1 main.o
-                0x0080022e                readyToExchange
- .bss.Error_j   0x0080022f        0x1 main.o
-                0x0080022f                Error_j
- .bss.j         0x00800230        0x1 main.o
-                0x00800230                j
- .bss.Otvet_Lazer_TXT
-                0x00800231        0x9 main.o
-                0x00800231                Otvet_Lazer_TXT
  .bss.Otvet_Lazer
-                0x0080023a        0xc main.o
-                0x0080023a                Otvet_Lazer
+                0x00800118        0xc main.o
+                0x00800118                Otvet_Lazer
+ .bss.Otvet_Lazer_TXT
+                0x00800124        0x9 main.o
+                0x00800124                Otvet_Lazer_TXT
+ .bss.j         0x0080012d        0x1 main.o
+                0x0080012d                j
+ .bss.Error_j   0x0080012e        0x1 main.o
+                0x0080012e                Error_j
+ .bss.readyToExchange
+                0x0080012f        0x1 main.o
+                0x0080012f                readyToExchange
+ .bss.readyToExchangeUSB
+                0x00800130        0x1 main.o
+                0x00800130                readyToExchangeUSB
+ .bss.readyToExchangeRec
+                0x00800131        0x1 main.o
+                0x00800131                readyToExchangeRec
+ .bss.numOfDataToSend
+                0x00800132        0x1 main.o
+                0x00800132                numOfDataToSend
+ .bss.numOfDataToSendUSB
+                0x00800133        0x1 main.o
+                0x00800133                numOfDataToSendUSB
+ .bss.numOfDataToReceive
+                0x00800134        0x1 main.o
+                0x00800134                numOfDataToReceive
+ .bss.sendDataPtr
+                0x00800135        0x2 main.o
+                0x00800135                sendDataPtr
+ .bss.sendDataPtrUSB
+                0x00800137        0x2 main.o
+                0x00800137                sendDataPtrUSB
+ .bss.receivedDataPtr
+                0x00800139        0x2 main.o
+                0x00800139                receivedDataPtr
+ .bss.numOfDataSended
+                0x0080013b        0x1 main.o
+                0x0080013b                numOfDataSended
+ .bss.numOfDataSendedUSB
+                0x0080013c        0x1 main.o
+                0x0080013c                numOfDataSendedUSB
+ .bss.numOfDataReceived
+                0x0080013d        0x1 main.o
+                0x0080013d                numOfDataReceived
  *(COMMON)
-                0x00800246                PROVIDE (__bss_end, .)
-                0x000003d8                __data_load_start = LOADADDR (.data)
-                0x000003f8                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080013e                PROVIDE (__bss_end, .)
+                0x00000578                __data_load_start = LOADADDR (.data)
+                0x00000590                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800246        0x0
+.noinit         0x0080013e        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800246                _end = .
+                0x0080013e                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -495,7 +480,7 @@ END GROUP
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
  .note.gnu.avr.deviceinfo
-                0x00000000       0x40 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x00000000       0x40 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -512,42 +497,42 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x48
+.debug_aranges  0x00000000       0x50
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x48 main.o
+                0x00000000       0x50 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x11ee
+.debug_info     0x00000000      0xcbe
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xbbc D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc      0x632 main.o
+ .debug_info    0x00000000      0x8ea D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .debug_info    0x000008ea      0x3d4 main.o
 
-.debug_abbrev   0x00000000      0xcee
+.debug_abbrev   0x00000000      0x96c
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0xb1a D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_abbrev  0x00000b1a      0x1d4 main.o
+ .debug_abbrev  0x00000000      0x86e D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .debug_abbrev  0x0000086e       0xfe main.o
 
-.debug_line     0x00000000      0x55d
+.debug_line     0x00000000      0x4d1
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x1fa D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_line    0x000001fa      0x363 main.o
+ .debug_line    0x00000000      0x1a6 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .debug_line    0x000001a6      0x32b main.o
 
-.debug_frame    0x00000000       0xe0
+.debug_frame    0x00000000      0x178
  *(.debug_frame)
- .debug_frame   0x00000000       0xe0 main.o
+ .debug_frame   0x00000000      0x178 main.o
 
-.debug_str      0x00000000      0x80b
+.debug_str      0x00000000      0x6b5
  *(.debug_str)
- .debug_str     0x00000000      0x3e6 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_str     0x000003e6      0x425 main.o
-                                0x459 (size before relaxing)
+ .debug_str     0x00000000      0x318 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .debug_str     0x00000318      0x39d main.o
+                                0x3d6 (size before relaxing)
 
-.debug_loc      0x00000000      0x36d
+.debug_loc      0x00000000      0x323
  *(.debug_loc)
- .debug_loc     0x00000000      0x36d main.o
+ .debug_loc     0x00000000      0x323 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -567,9 +552,9 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x38
+.debug_ranges   0x00000000       0x40
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x38 main.o
+ .debug_ranges  0x00000000       0x40 main.o
 
 .debug_macro
  *(.debug_macro)

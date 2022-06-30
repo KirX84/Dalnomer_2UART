@@ -15,19 +15,37 @@ template <typename T>
 class vector_circ
 {
 	public:
-		//vector_circ(){};
-		//~vector_circ(){};
 		T val;
 		int size;
 		T* begin, end, next;
-
-		void push_back( const T& value)
+		vector_circ()
+		{	
+		    begin = new(T);
+			end = begin;	
+			for(int i = 0; i < 31; i++)
+			{
+				end->next = new(T);
+				end = end->next;
+			}
+			end->next = begin;
+			end = begin;
+		}
+		~vector_circ()
 		{
-			next = new(T);
-			end = next;
-			end.val
-			if(size>31) push_back(value);
-			else push_back(begin);
+			while(!end->next)
+			{
+				end = begin->next;
+				delete(begin);
+				begin = end;
+			}
+			delete(begin);
+
+		}
+		
+		void push_back( const T& value)
+		{   
+		    end->val = value;
+			end = end.next;
 		}
 };
 unsigned char EEMEM num_dal_addr;

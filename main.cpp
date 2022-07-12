@@ -12,18 +12,19 @@
 //typedef enum {FALSE = 0, TRUE = !FALSE} bool;
 //int i = 0;
 template <typename T>
-struct Node
+struct Node                                  //элемент списка
 {
 	T val;
 	Node* next;
-	Node(T _val) : val(_val), next(NULL){}
+	//Node(T _val) : val(_val), next(NULL){}
 };
-class vector_circ
+template <typename T>
+class vector_circ                          //кольцевой буфер
 {
 	public:
 		T val;
 		int size;
-		Node* first, curr;
+		Node<T>* first, curr;
 		vector_circ()
 		{	
 		    first = new(T);
@@ -38,7 +39,7 @@ class vector_circ
 		}
 		~vector_circ()
 		{
-			while(!curr->next)
+			while(!first->next)
 			{
 				curr = first->next;
 				delete(first);
@@ -48,10 +49,18 @@ class vector_circ
 			delete(first);			
 		}
 		
-		void push_back( const T& value)
+		 push_back( const T& value)
 		{   
 		    curr->val = value;
 			curr = curr.next;
+		}
+		void read(int len, unsigned char* buffer)
+        {
+			for(int i = 0; i < len; i++) 
+			{
+				buffer[i] = first->val;
+				first = first->next;
+			}
 		}
 };
 unsigned char EEMEM num_dal_addr;

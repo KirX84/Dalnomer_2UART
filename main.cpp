@@ -18,21 +18,22 @@ struct Node                                  //элемент списка
 	Node* next;
 	//Node(T _val) : val(_val), next(NULL){}
 };
-template <typename T>
+//template <typename T>
 class vector_circ                          //кольцевой буфер
 {
 	public:
 		//T val;
 		int cout = 0;
-		Node<T>* frst, curr;
+		Node<unsigned char> *frst, *curr;
 		vector_circ(int size)
 		{	
-		    cout = 0
-			frst = new(T);
+		    cout = 0;
+			frst = new(Node<unsigned char>);
 			curr = frst;	
 			for(int i = 0; i < size; i++)
 			{
-				curr->next = new(T);
+				curr->next = new(Node<unsigned char>);
+				curr->val = 0;
 				curr = curr->next;
 			}
 			curr->next = frst;
@@ -50,7 +51,7 @@ class vector_circ                          //кольцевой буфер
 			delete(frst);			
 		}
 		
-		 push_back( const T& value)
+		 push_back( const unsigned char& value)
 		{  
 			curr->val = value;
 			curr = curr.next;
@@ -138,7 +139,8 @@ unsigned char *receivedDataPtrUSB;
 unsigned char numOfDataSended;
 unsigned char numOfDataSendedUSB;
 unsigned char numOfDataReceived;
-vector_circ <unsigned char> buff(32);
+vector_circ buff(32);
+unsigned char buffer[11];
 /***************************************************************************************/
 void UART_SendData(uint8_t *pSendData, uint8_t nNumOfDataToSend)
 {
@@ -230,7 +232,7 @@ int main(void)
 	//testBuffer = {0x67, 0x30, 0x73, 0x76, 0x2B, 0x30, 0x30};
     while(1)
     {
-        UART_ReceiveData(Otvet_Lazer, 12);
+        UART_ReceiveData(buffer, 12);
 		while(!readyToExchangeRec);
 		//_delay_ms(150);
 		UART_SendDataUSB(Otvet_Lazer_TXT, 8);
@@ -277,24 +279,24 @@ ISR(USART1_RX_vect)
 		readyToExchangeRec = 1;
 	}*/
 
-
     buff.push_back(UDR1);
+	buff.read(11, buffer);
 
 	//UART_SendDataUSB(Otvet_Lazer, 12);
     //*receivedDataPtr = UDR1;
 
-	if ((Otvet_Lazer[0]==0x80) && (Otvet_Lazer[1]==0x06) && (Otvet_Lazer[2]==0x83) && (Otvet_Lazer[3]==0x30) && (Otvet_Lazer[6]==0x2E)) 
+	if ((buffer[0]==0x80) && (buffer[1]==0x06) && (buffer[2]==0x83) && (buffer[3]==0x30) && (buffer[6]==0x2E)) 
 	{
-		int CS = Otvet_Lazer[0]+Otvet_Lazer[1]+Otvet_Lazer[2]+Otvet_Lazer[3];
+		int CS = buffer[0]+buffer[1]+buffer[2]+buffer[3];
 		Error_j = 0;
 		for (int i=0; i <= 6; i++) 
 		{
-			j = Otvet_Lazer[i+4];
+			j = buffer[i+4];
 			CS=CS+j;
 			if (((j > 47) && (j < 59)) || (j==0x2E)) Otvet_Lazer_TXT[i] = j;
 			else Error_j=1;
 		}
-		if ((Error_j == 0) && (256 - CS % 256 == Otvet_Lazer[11])) 
+		if ((Error_j == 0) && (256 - CS % 256 == buffer[11])) 
 		{
 			Otvet_Lazer_TXT[7] = 0x0D;              //Ставим символ переноса в конце строки
 			Otvet_Lazer_TXT[2] = 0x2C;              //Ставим запятую вместо точки в число на выдачу

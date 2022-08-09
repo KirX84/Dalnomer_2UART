@@ -1,7 +1,6 @@
 /***************************************************************************************/
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <avr/eeprom.h>
 #include <stdio.h>
 #include <string.h>
 #include<util/delay.h>
@@ -11,9 +10,6 @@
 /***************************************************************************************/
 //typedef enum {FALSE = 0, TRUE = !FALSE} bool;
 //int i = 0;
-unsigned char EEMEM num_dal_addr;
-unsigned char EEMEM op_mode_addr;
-
 unsigned char //////////////////////////////////////////////////////////////////////////
               //Команды дальномера
               //Установить разрешение:
@@ -28,7 +24,7 @@ unsigned char //////////////////////////////////////////////////////////////////
 			  Lazer_10g[8] = "\xFA\x04\x0A\x0A\xEE",		  //Установить частоту 10Гц
 			  Lazer_20g[8] = "\xFA\x04\x0A\x14\xE4",		  //Установить частоту 20Гц
 			  //Установить режим измерения
-			  Lazer_one_zam[7] = "\x80\x06\x02\x78",		  //Один замер
+			  Lazer_one_zam[7] "\x80\x06\x02\x78"			  //Один замер
               Lazer_nepr_zam[7] = "\x80\x06\x03\x77",		  //Непрерывное измерение
 
 			  Lazer_shtd[7] = "\x80\x04\x02\x7A",             //Отключение устройства
@@ -44,7 +40,7 @@ unsigned char //////////////////////////////////////////////////////////////////
 			  Lazer_80m[8] = "\xFA\x04\x09\x50\xA9",		 //80 м
 
 			  Lazer_dal_min[9] = "\xFA\x04\x06\x2D\x01\xCE",   //Изменение расстояния-1
-			  Lazer_dal_pl[9] = "\xFA\x04\x06\x2B\x01\xD0",  //Изменение расстояния+1
+			  Lazer_dal_pl[9] = "\xFA\x04\x06\x2B\x\x01\xD0",  //Изменение расстояния+1
 			  //Установить начальную точку
 			  Lazer_top[8] = "\xFA\x04\x08\x01\xF9",        //верх
 			  Lazer_back[8] = "\xFA\x04\x08\x00\xFA",       //низ
@@ -56,21 +52,15 @@ unsigned char //////////////////////////////////////////////////////////////////
 			  Lazer_open[8] = "\x80\x06\x05\x00\x75",	//Закрыть
 			  //////////////////////////////////////////////////////////////////////////
 			  //Внешние комады при №0
-			  Zapros_one_zam_one[8] = "\x73\x30\x67\x0D\x0A", //Запрос на один замер (s0g)
-			  Zapros_nepr_zam_one[8] = "\x73\x30\x67\x0D\x0A", //Запрос на непрерывное измерение (s0h)
-			  Zapros_number_one[12] = "\x73\x30\x69\x64\x2B\x30\x30\x0D\x0A", //Запрос на изменение номера на 00 (s0id+00) 
-              Zapros_save_one[8] = "\x73\x30\x73\x0D\x0A", //Запрос на сохранение параметров (s0s)
-			  Zapros_one_zam_two[9] = "\x73\x30\x30\x67\x0D\x0A", //Запрос на один замер (s00g)
-			  Zapros_nepr_zam_two[9] = "\x73\x30\x30\x67\x0D\x0A", //Запрос на непрерывное измерение (s00h)
-			  Zapros_number_two[13] = "\x73\x30\x30\x69\x64\x2B\x30\x30\x0D\x0A", //Запрос на изменение номера на 00 (s00id+00) 
-              Zapros_save_two[9] = "\x73\x30\x30\x73\x0D\x0A", //Запрос на сохранение параметров (s00s)
+			  Zapros_one_zam[8] = "\x73\x30\x67\x0D\x0A", //Запрос на один замер (s0g)
+			  Zapros_one_zam[8] = "\x73\x30\x67\x0D\x0A", //Запрос на непрерывное измерение (s0h)
+			  Zapros_number[10] = "\x73\x30\x69\x64\x2B\x30\x30", //Запрос на изменение номера на 00 (s0id+00) 
 			  //////////////////////////////////////////////////////////////////////////
 
 			  Otvet_Lazer[12],
 			  Otvet_Lazer_TXT[9],
 			  i, incomingByte, idx, j,
-			  num_dal,                                      //номер дальномера 0..99
-			  op_mode,                                      //режим работы 0..2
+			  num,                                      //номер дальномера 0..99
 			  Error_j;
 bool readyToExchange, readyToExchangeUSB, readyToExchangeRec;
 unsigned char numOfDataToSend;
@@ -114,31 +104,6 @@ void UART_ReceiveData(uint8_t* pReceivedData, uint8_t nNumOfDataToReceive)
 /***************************************************************************************/
 int main(void)
 {
-	if(eeprom_read_byte(&num_dal_addr) == 0xFFFF) num_dal = 0;
-	else num_dal = eeprom_read_byte(&num_dal_addr);
-	if(eeprom_read_byte(&op_mode_addr) == 0xFFFF) op_mode = 0;
-	else num_dal = eeprom_read_byte(&op_mode_addr);
-	if(!(num_dal/10))
-	{
-		Zapros_one_zam_one[1] = '0x30' + num_dal;
-		Zapros_nepr_zam_one[1] = '0x30'+ num_dal;
-		Zapros_number_one[1] = '0x30'+ num_dal;
-		Zapros_save_one[1] = '0x30'+ num_dal;
-	}
-	else
-	{
-		Zapros_one_zam_two[1] = '0x30' + (num_dal/10);
-		Zapros_one_zam_two[2] = '0x30' + (num_dal%10);
-		Zapros_nepr_zam_two[1] = '0x30' + (num_dal/10);
-		Zapros_nepr_zam_two[2] = '0x30' + (num_dal%10);
-		Zapros_number_two[1] = '0x30' + (num_dal/10);
-		Zapros_number_two[2] = '0x30' + (num_dal%10);
-		Zapros_save_two[1] = '0x30' + (num_dal/10);
-		Zapros_save_two[2] = '0x30' + (num_dal%10);
-	}
-	//Анализатор команд
-
-	//eeprom_write_byte(&num_dal_addr, num_dal);
     sei();
 
 	UBRR0H = 0;

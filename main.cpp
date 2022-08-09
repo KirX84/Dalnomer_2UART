@@ -49,7 +49,7 @@ class vector_circ                          //кольцевой буфер
 			delete(first);			
 		}
 		
-		 push_back( const T& value)
+		void push_back( const T& value)
 		{   
 		    curr->val = value;
 			curr = curr.next;

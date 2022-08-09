@@ -51,10 +51,10 @@ class vector_circ                          //кольцевой буфер
 			delete(frst);			
 		}
 		
-		void push_back( unsigned char value)
+		 push_back( const unsigned char& value)
 		{  
 			curr->val = value;
-			curr = curr->next;
+			curr = curr.next;
 			cout++;
 		}
 		void read(int len, unsigned char* buffer)
@@ -65,10 +65,6 @@ class vector_circ                          //кольцевой буфер
 				//frst = frst->next;
 			}
 			//cout-=len;
-		}
-		void move_first() 
-		{
-			frst=frst->next;
 		}
 };
 unsigned char EEMEM num_dal_addr;

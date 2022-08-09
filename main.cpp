@@ -25,6 +25,7 @@ class vector_circ                          //кольцевой буфер
 		T val;
 		int size;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Node<T>* first, curr;
 		vector_circ()
 		{	
@@ -32,6 +33,8 @@ class vector_circ                          //кольцевой буфер
 			curr = first;	
 			for(int i = 0; i < size; i++)
 =======
+=======
+>>>>>>> parent of d1290bf (Change ptr name)
 		T* begin, end, next;
 		vector_circ()
 		{	
@@ -43,6 +46,7 @@ class vector_circ                          //кольцевой буфер
 				end->next = new(T);
 				end = end->next;
 			}
+<<<<<<< HEAD
 <<<<<<< HEAD
 			curr->next = first;
 			curr = first;
@@ -66,6 +70,18 @@ class vector_circ                          //кольцевой буфер
 				delete(begin);
 				begin = end;
 >>>>>>> parent of d1290bf (Change ptr name)
+=======
+			end->next = begin;
+			end = begin;
+		}
+		~vector_circ()
+		{
+			while(!end->next)
+			{
+				end = begin->next;
+				delete(begin);
+				begin = end;
+>>>>>>> parent of d1290bf (Change ptr name)
 			}
 			curr = NULL;
 			delete(first);			
@@ -75,6 +91,7 @@ class vector_circ                          //кольцевой буфер
 		{   
 		    end->val = value;
 			end = end.next;
+<<<<<<< HEAD
 		}
 		void read(int len, unsigned char* buffer)
         {
@@ -83,6 +100,8 @@ class vector_circ                          //кольцевой буфер
 				buffer[i] = first->val;
 				first = first->next;
 			}
+=======
+>>>>>>> parent of d1290bf (Change ptr name)
 		}
 };
 unsigned char EEMEM num_dal_addr;

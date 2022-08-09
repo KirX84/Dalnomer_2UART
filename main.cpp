@@ -22,48 +22,45 @@ template <typename T>
 class vector_circ                          //кольцевой буфер
 {
 	public:
-		//T val;
-		int cout = 0;
-		Node<T>* frst, curr;
-		vector_circ(int size)
+		T val;
+		int size;
+		Node<T>* first, curr;
+		vector_circ()
 		{	
-		    cout = 0
-			frst = new(T);
-			curr = frst;	
+		    first = new(T);
+			curr = first;	
 			for(int i = 0; i < size; i++)
 			{
 				curr->next = new(T);
 				curr = curr->next;
 			}
-			curr->next = frst;
-			curr = frst;
+			curr->next = first;
+			curr = first;
 		}
 		~vector_circ()
 		{
-			while(!frst->next)
+			while(!first->next)
 			{
-				curr = frst->next;
-				delete(frst);
-				frst = curr;
+				curr = first->next;
+				delete(first);
+				first = curr;
 			}
 			curr = NULL;
-			delete(frst);			
+			delete(first);			
 		}
 		
 		 push_back( const T& value)
-		{  
-			curr->val = value;
+		{   
+		    curr->val = value;
 			curr = curr.next;
-			cout++;
 		}
 		void read(int len, unsigned char* buffer)
         {
 			for(int i = 0; i < len; i++) 
 			{
-				buffer[i] = frst->val;
-				//frst = frst->next;
+				buffer[i] = first->val;
+				first = first->next;
 			}
-			//cout-=len;
 		}
 };
 unsigned char EEMEM num_dal_addr;
@@ -138,7 +135,6 @@ unsigned char *receivedDataPtrUSB;
 unsigned char numOfDataSended;
 unsigned char numOfDataSendedUSB;
 unsigned char numOfDataReceived;
-vector_circ <unsigned char> buff(32);
 /***************************************************************************************/
 void UART_SendData(uint8_t *pSendData, uint8_t nNumOfDataToSend)
 {
@@ -278,7 +274,18 @@ ISR(USART1_RX_vect)
 	}*/
 
 
-    buff.push_back(UDR1);
+    Otvet_Lazer[0] = Otvet_Lazer[1];
+    Otvet_Lazer[1] = Otvet_Lazer[2];
+    Otvet_Lazer[2] = Otvet_Lazer[3];
+    Otvet_Lazer[3] = Otvet_Lazer[4];
+    Otvet_Lazer[4] = Otvet_Lazer[5];
+    Otvet_Lazer[5] = Otvet_Lazer[6];
+    Otvet_Lazer[6] = Otvet_Lazer[7];
+    Otvet_Lazer[7] = Otvet_Lazer[8];
+    Otvet_Lazer[8] = Otvet_Lazer[9];
+    Otvet_Lazer[9] = Otvet_Lazer[10];
+    Otvet_Lazer[10] = Otvet_Lazer[11];
+    Otvet_Lazer[11] = UDR1;
 
 	//UART_SendDataUSB(Otvet_Lazer, 12);
     //*receivedDataPtr = UDR1;

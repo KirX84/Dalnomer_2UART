@@ -11,6 +11,7 @@
 /***************************************************************************************/
 //typedef enum {FALSE = 0, TRUE = !FALSE} bool;
 //int i = 0;
+<<<<<<< HEAD
 template <typename T>
 struct Node                                  //элемент списка
 {
@@ -129,6 +130,9 @@ unsigned char EEMEM op_mode_addr;
 unsigned char //////////////////////////////////////////////////////////////////////////
               //Команды дальномера
               //Установить разрешение:
+=======
+unsigned char //Установить разрешение:
+>>>>>>> parent of edd0565 (Add commads)
               Lazer_1mm[8] = "\xFA\x04\x0C\x01\xF5",		  //Разрешение 1мм
               Lazer_01mm[8] = "\xFA\x04\x0C\x02\xF4",		  //Разрешение 0.1мм
 			  //Установить временной интервал:
@@ -161,6 +165,7 @@ unsigned char //////////////////////////////////////////////////////////////////
 			  Lazer_top[8] = "\xFA\x04\x08\x01\xF9",        //верх
 			  Lazer_back[8] = "\xFA\x04\x08\x00\xFA",       //низ
 			  
+<<<<<<< HEAD
 			  Lazer_one_zam_broad[7] = "\xFA\x06\x06\xFA",  //Однократное измерение (широковещательное)
 			  Lazer_cash[7] = "\x80\x06\x07\x73",	//Чтение кэша
 			  //Контрольный лазер:
@@ -184,6 +189,17 @@ unsigned char //////////////////////////////////////////////////////////////////
 			  num_dal,                                      //номер дальномера 0..99
 			  op_mode,                                      //режим работы 0..2
 			  Error_j;
+=======
+			  Единое измерение (трансляция)	$FA$06$06$FA
+			  Чтение кэша:			$80$06$07$73	80 06 82 30 30 33 2E 35 36 39 35 5E
+			  Контрольный лазер:
+			  $80$06$05$01$74	Открытый	80 06 85 01 F4
+			  $80$06$05$00$75	Закрыть		80 06 85 01 F4
+
+			  Otvet_Lazer[12],
+			  Otvet_Lazer_TXT[9],
+			  i, incomingByte, idx, j, Error_j;
+>>>>>>> parent of edd0565 (Add commads)
 bool readyToExchange, readyToExchangeUSB, readyToExchangeRec;
 unsigned char numOfDataToSend;
 unsigned char numOfDataToSendUSB;

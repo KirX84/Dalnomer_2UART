@@ -68,7 +68,6 @@ Discarded input sections
  .bss.incomingByte
                 0x00000000        0x1 main.o
  .bss.idx       0x00000000        0x1 main.o
- .bss.op_mode   0x00000000        0x1 main.o
  .bss.receivedDataPtrUSB
                 0x00000000        0x2 main.o
  .text          0x00000000        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -251,7 +250,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x6ce
+.text           0x00000000      0x5fe
  *(.vectors)
  .vectors       0x00000000       0xb4 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
                 0x00000000                __vector_default
@@ -363,25 +362,25 @@ END GROUP
  .text._Z16UART_ReceiveDataPhh
                 0x00000184       0x4c main.o
                 0x00000184                _Z16UART_ReceiveDataPhh
- .text.main     0x000001d0      0x1f6 main.o
+ .text.main     0x000001d0      0x126 main.o
                 0x000001d0                main
  .text.__vector_29
-                0x000003c6       0x92 main.o
-                0x000003c6                __vector_29
+                0x000002f6       0x92 main.o
+                0x000002f6                __vector_29
  .text.__vector_19
-                0x00000458       0x92 main.o
-                0x00000458                __vector_19
+                0x00000388       0x92 main.o
+                0x00000388                __vector_19
  .text.__vector_28
-                0x000004ea      0x1d0 main.o
-                0x000004ea                __vector_28
+                0x0000041a      0x1d0 main.o
+                0x0000041a                __vector_28
  .text.avr-libc
-                0x000006ba       0x10 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5\libatmega328pb.a(eerd_byte.o)
-                0x000006ba                eeprom_read_byte
-                0x000006ca                . = ALIGN (0x2)
+                0x000005ea       0x10 D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5\libatmega328pb.a(eerd_byte.o)
+                0x000005ea                eeprom_read_byte
+                0x000005fa                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000006ca        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000006ca                _exit
-                0x000006ca                exit
+ .fini9         0x000005fa        0x0 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000005fa                _exit
+                0x000005fa                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -400,11 +399,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000006ca        0x4 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000005fa        0x4 d:/program files/avrstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000006ce                _etext = .
+                0x000005fe                _etext = .
 
-.data           0x00800100       0x64 load address 0x000006ce
+.data           0x00800100       0x60 load address 0x000005fe
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -424,94 +423,96 @@ END GROUP
                 0x0080011f        0x8 main.o
                 0x0080011f                Zapros_nepr_zam_one
  .data.Zapros_number_one
-                0x00800127        0xc main.o
+                0x00800127        0xa main.o
                 0x00800127                Zapros_number_one
  .data.Zapros_save_one
-                0x00800133        0x8 main.o
-                0x00800133                Zapros_save_one
+                0x00800131        0x8 main.o
+                0x00800131                Zapros_save_one
  .data.Zapros_one_zam_two
-                0x0080013b        0x9 main.o
-                0x0080013b                Zapros_one_zam_two
+                0x00800139        0x9 main.o
+                0x00800139                Zapros_one_zam_two
  .data.Zapros_nepr_zam_two
-                0x00800144        0x9 main.o
-                0x00800144                Zapros_nepr_zam_two
+                0x00800142        0x9 main.o
+                0x00800142                Zapros_nepr_zam_two
  .data.Zapros_number_two
-                0x0080014d        0xd main.o
-                0x0080014d                Zapros_number_two
+                0x0080014b        0xb main.o
+                0x0080014b                Zapros_number_two
  .data.Zapros_save_two
-                0x0080015a        0x9 main.o
-                0x0080015a                Zapros_save_two
+                0x00800156        0x9 main.o
+                0x00800156                Zapros_save_two
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800164                . = ALIGN (0x2)
- *fill*         0x00800163        0x1 
-                0x00800164                _edata = .
-                0x00800164                PROVIDE (__data_end, .)
+                0x00800160                . = ALIGN (0x2)
+ *fill*         0x0080015f        0x1 
+                0x00800160                _edata = .
+                0x00800160                PROVIDE (__data_end, .)
 
-.bss            0x00800164       0x27
-                0x00800164                PROVIDE (__bss_start, .)
+.bss            0x00800160       0x28
+                0x00800160                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.Otvet_Lazer
-                0x00800164        0xc main.o
-                0x00800164                Otvet_Lazer
+                0x00800160        0xc main.o
+                0x00800160                Otvet_Lazer
  .bss.Otvet_Lazer_TXT
-                0x00800170        0x9 main.o
-                0x00800170                Otvet_Lazer_TXT
- .bss.j         0x00800179        0x1 main.o
-                0x00800179                j
- .bss.num_dal   0x0080017a        0x1 main.o
-                0x0080017a                num_dal
- .bss.Error_j   0x0080017b        0x1 main.o
-                0x0080017b                Error_j
+                0x0080016c        0x9 main.o
+                0x0080016c                Otvet_Lazer_TXT
+ .bss.j         0x00800175        0x1 main.o
+                0x00800175                j
+ .bss.num_dal   0x00800176        0x1 main.o
+                0x00800176                num_dal
+ .bss.op_mode   0x00800177        0x1 main.o
+                0x00800177                op_mode
+ .bss.Error_j   0x00800178        0x1 main.o
+                0x00800178                Error_j
  .bss.readyToExchange
-                0x0080017c        0x1 main.o
-                0x0080017c                readyToExchange
+                0x00800179        0x1 main.o
+                0x00800179                readyToExchange
  .bss.readyToExchangeUSB
-                0x0080017d        0x1 main.o
-                0x0080017d                readyToExchangeUSB
+                0x0080017a        0x1 main.o
+                0x0080017a                readyToExchangeUSB
  .bss.readyToExchangeRec
-                0x0080017e        0x1 main.o
-                0x0080017e                readyToExchangeRec
+                0x0080017b        0x1 main.o
+                0x0080017b                readyToExchangeRec
  .bss.numOfDataToSend
-                0x0080017f        0x1 main.o
-                0x0080017f                numOfDataToSend
+                0x0080017c        0x1 main.o
+                0x0080017c                numOfDataToSend
  .bss.numOfDataToSendUSB
-                0x00800180        0x1 main.o
-                0x00800180                numOfDataToSendUSB
+                0x0080017d        0x1 main.o
+                0x0080017d                numOfDataToSendUSB
  .bss.numOfDataToReceive
-                0x00800181        0x1 main.o
-                0x00800181                numOfDataToReceive
+                0x0080017e        0x1 main.o
+                0x0080017e                numOfDataToReceive
  .bss.sendDataPtr
-                0x00800182        0x2 main.o
-                0x00800182                sendDataPtr
+                0x0080017f        0x2 main.o
+                0x0080017f                sendDataPtr
  .bss.sendDataPtrUSB
-                0x00800184        0x2 main.o
-                0x00800184                sendDataPtrUSB
+                0x00800181        0x2 main.o
+                0x00800181                sendDataPtrUSB
  .bss.receivedDataPtr
-                0x00800186        0x2 main.o
-                0x00800186                receivedDataPtr
+                0x00800183        0x2 main.o
+                0x00800183                receivedDataPtr
  .bss.numOfDataSended
-                0x00800188        0x1 main.o
-                0x00800188                numOfDataSended
+                0x00800185        0x1 main.o
+                0x00800185                numOfDataSended
  .bss.numOfDataSendedUSB
-                0x00800189        0x1 main.o
-                0x00800189                numOfDataSendedUSB
+                0x00800186        0x1 main.o
+                0x00800186                numOfDataSendedUSB
  .bss.numOfDataReceived
-                0x0080018a        0x1 main.o
-                0x0080018a                numOfDataReceived
+                0x00800187        0x1 main.o
+                0x00800187                numOfDataReceived
  *(COMMON)
-                0x0080018b                PROVIDE (__bss_end, .)
-                0x000006ce                __data_load_start = LOADADDR (.data)
-                0x00000732                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800188                PROVIDE (__bss_end, .)
+                0x000005fe                __data_load_start = LOADADDR (.data)
+                0x0000065e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080018b        0x0
+.noinit         0x00800188        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080018b                _end = .
+                0x00800188                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x2
@@ -589,11 +590,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xfc0
+.debug_info     0x00000000      0xfcd
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x8ea D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
- .debug_info    0x000008ea      0x63b main.o
- .debug_info    0x00000f25       0x9b D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5\libatmega328pb.a(eerd_byte.o)
+ .debug_info    0x000008ea      0x648 main.o
+ .debug_info    0x00000f32       0x9b D:/Program Files/AVRStudio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328pb/avr5\libatmega328pb.a(eerd_byte.o)
 
 .debug_abbrev   0x00000000      0x980
  *(.debug_abbrev)

@@ -11,25 +11,6 @@
 /***************************************************************************************/
 //typedef enum {FALSE = 0, TRUE = !FALSE} bool;
 //int i = 0;
-template <typename T>
-class vector_circ
-{
-	public:
-		//vector_circ(){};
-		//~vector_circ(){};
-		T val;
-		int size;
-		T* begin, end, next;
-
-		void push_back( const T& value)
-		{
-			next = new(T);
-			end = next;
-			end.val
-			if(size>31) push_back(value);
-			else push_back(begin);
-		}
-};
 unsigned char EEMEM num_dal_addr;
 unsigned char EEMEM op_mode_addr;
 

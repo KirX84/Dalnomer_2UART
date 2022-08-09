@@ -12,34 +12,40 @@
 //typedef enum {FALSE = 0, TRUE = !FALSE} bool;
 //int i = 0;
 template <typename T>
+struct Node
+{
+	T val;
+	Node* next;
+	Node(T _val) : val(_val), next(NULL){}
+};
 class vector_circ
 {
 	public:
 		T val;
 		int size;
-		T* begin, curr, next;
+		Node* first, curr;
 		vector_circ()
 		{	
-		    begin = new(T);
-			curr = begin;	
-			for(int i = 0; i < 31; i++)
+		    first = new(T);
+			curr = first;	
+			for(int i = 0; i < size; i++)
 			{
 				curr->next = new(T);
 				curr = curr->next;
 			}
-			curr->next = begin;
-			curr = begin;
+			curr->next = first;
+			curr = first;
 		}
-		~vector_circ() //переписать
+		~vector_circ()
 		{
 			while(!curr->next)
 			{
-				curr = begin->next;
-				delete(begin);
-				begin = curr;
+				curr = first->next;
+				delete(first);
+				first = curr;
 			}
-			delete(begin);
-
+			curr = NULL;
+			delete(first);			
 		}
 		
 		void push_back( const T& value)

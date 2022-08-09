@@ -17,26 +17,26 @@ class vector_circ
 	public:
 		T val;
 		int size;
-		T* begin, curr, next;
+		T* begin, end, next;
 		vector_circ()
 		{	
 		    begin = new(T);
-			curr = begin;	
+			end = begin;	
 			for(int i = 0; i < 31; i++)
 			{
-				curr->next = new(T);
-				curr = curr->next;
+				end->next = new(T);
+				end = end->next;
 			}
-			curr->next = begin;
-			curr = begin;
+			end->next = begin;
+			end = begin;
 		}
-		~vector_circ() //переписать
+		~vector_circ()
 		{
-			while(!curr->next)
+			while(!end->next)
 			{
-				curr = begin->next;
+				end = begin->next;
 				delete(begin);
-				begin = curr;
+				begin = end;
 			}
 			delete(begin);
 
@@ -44,8 +44,8 @@ class vector_circ
 		
 		void push_back( const T& value)
 		{   
-		    curr->val = value;
-			curr = curr.next;
+		    end->val = value;
+			end = end.next;
 		}
 };
 unsigned char EEMEM num_dal_addr;

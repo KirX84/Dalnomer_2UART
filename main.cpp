@@ -109,10 +109,11 @@ unsigned char //////////////////////////////////////////////////////////////////
 			  num_dal,                                      //номер дальномера 0..99
 			  op_mode,                                      //режим работы 0..2
 			  Error_j;
-bool readyToExchange, readyToExchangeUSB, readyToExchangeRec;
+bool readyToExchange, readyToExchangeUSB, readyToExchangeRec, readyToExchangeRecUSB;
 unsigned char numOfDataToSend;
 unsigned char numOfDataToSendUSB;
 unsigned char numOfDataToReceive;
+unsigned char numOfDataToReceiveUSB;
 unsigned char *sendDataPtr;
 unsigned char *sendDataPtrUSB;
 unsigned char *receivedDataPtr;
@@ -120,12 +121,12 @@ unsigned char *receivedDataPtrUSB;
 unsigned char numOfDataSended;
 unsigned char numOfDataSendedUSB;
 unsigned char numOfDataReceived;
+unsigned char numOfDataReceivedUSB;
 /***************************************************************************************/
 void UART_SendData(uint8_t *pSendData, uint8_t nNumOfDataToSend)
 {
     sendDataPtr = pSendData;
     numOfDataToSend = nNumOfDataToSend;
-	//uart_send(pSendData);
     numOfDataSended = 0;
     readyToExchange = false;
     UCSR1B |= (1 << UDRIE1);
@@ -149,8 +150,19 @@ void UART_ReceiveData(uint8_t* pReceivedData, uint8_t nNumOfDataToReceive)
     UCSR1B |= (1 << RXCIE1);
 }
 /***************************************************************************************/
+void UART_ReceiveDataUSB(uint8_t* pReceivedData, uint8_t nNumOfDataToReceive)
+{
+	receivedDataPtrUSB = pReceivedData;
+	numOfDataToReceiveUSB = nNumOfDataToReceive;
+	numOfDataReceivedUSB = 0;
+	readyToExchangeRecUSB = false;
+	UCSR0B |= (1 << RXCIE0);
+}
+/***************************************************************************************/
 int main(void)
 {
+    DDRB |= 1<<5;
+
 	if(eeprom_read_byte(&num_dal_addr) == 0xFFFF) num_dal = 0;
 	else num_dal = eeprom_read_byte(&num_dal_addr);
 	if(eeprom_read_byte(&op_mode_addr) == 0xFFFF) op_mode = 0;
@@ -196,27 +208,35 @@ int main(void)
 	//uart_init();
 	//UCSR1B |= (1 << RXEN1) | (1 << RXCIE1);
 	//_delay_ms(10);*/
-	UART_SendData(Lazer_0c,5);
-	while(!readyToExchange);
-	//_delay_ms(10);
-	UART_SendData(Lazer_1g,5);
-	while(!readyToExchange);
-	//_delay_ms(10);
-	UART_SendData(Lazer_nepr_zam,4);
-	while(!readyToExchange);
+// 	UART_SendData(Lazer_0c,5);
+// 	while(!readyToExchange);
+// 	UART_SendData(Lazer_1g,5);
+// 	while(!readyToExchange);
+	//UART_SendData(Lazer_nepr_zam,4);
+	//while(!readyToExchange);
 	//_delay_ms(10);
 	/*memcpy(testBuffer, 
 	"\x67\x30\x73\x76\x2B\x30\x30",
 	 sizeof testBuffer);*/
 	//testBuffer = {0x67, 0x30, 0x73, 0x76, 0x2B, 0x30, 0x30};
+	PORTB |= 1<<5;
+	UART_ReceiveDataUSB(Otvet_Lazer_TXT, 5);
+	while(!readyToExchangeRecUSB);
+	_delay_ms(1000);
+	PORTB &= ~ 0<<5;
     while(1)
     {
-        UART_ReceiveData(Otvet_Lazer, 12);
-		while(!readyToExchangeRec);
-		//_delay_ms(150);
-		UART_SendDataUSB(Otvet_Lazer_TXT, 8);
+	    //PORTB |= 1<<5;
+        //UART_ReceiveDataUSB(Otvet_Lazer_TXT, 5);
+		//while(!readyToExchangeRecUSB);
+// 		_delay_ms(1000);
+// 		PORTB &= ~ 0<<5;
+		_delay_ms(1000);
+		PORTB |= 1<<5;
+		UART_SendDataUSB(Otvet_Lazer_TXT, 5);
 		while(!readyToExchangeUSB);
-		//_delay_ms(150);
+		PORTB &= ~ 0<<5;
+		_delay_ms(1000);
     }
 }
 /***************************************************************************************/
@@ -306,3 +326,27 @@ ISR(USART1_RX_vect)
     }*/
 }
 /***************************************************************************************/
+ISR(USART0_RX_vect)
+{
+//       PORTB |= 1<<5;
+//     Otvet_Lazer_TXT[0] = Otvet_Lazer_TXT[1];
+//     Otvet_Lazer_TXT[1] = Otvet_Lazer_TXT[2];
+//     Otvet_Lazer_TXT[2] = Otvet_Lazer_TXT[3];
+//     Otvet_Lazer_TXT[3] = Otvet_Lazer_TXT[4];
+//     Otvet_Lazer_TXT[4] = Otvet_Lazer_TXT[5];
+//     Otvet_Lazer_TXT[5] = Otvet_Lazer_TXT[6];
+//     Otvet_Lazer_TXT[6] = Otvet_Lazer_TXT[7];
+//     Otvet_Lazer_TXT[7] = UDR1;
+
+	*receivedDataPtrUSB = UDR0;
+	receivedDataPtrUSB++;
+	numOfDataReceivedUSB++;
+	
+
+
+    if (numOfDataReceivedUSB == numOfDataToReceiveUSB)
+    {
+        UCSR0B &= ~((1 << RXCIE0) | (1 << RXEN0));
+        readyToExchangeRecUSB = 1;
+    }
+}

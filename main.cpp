@@ -30,7 +30,7 @@ class vector_circ
 			curr->next = begin;
 			curr = begin;
 		}
-		~vector_circ() //переписать
+		~vector_circ() 
 		{
 			while(!curr->next)
 			{
